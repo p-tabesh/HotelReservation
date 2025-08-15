@@ -24,6 +24,6 @@ public class Reservation
 
     public void ApplyDiscount(IDiscount discount)
     {
-        discount.CalcualteDiscount();
+         = discount.CalcualteDiscount(this);
     }
 }

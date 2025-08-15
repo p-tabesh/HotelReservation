@@ -10,7 +10,7 @@ public class VIPCustomerDiscount : IDiscount
         _customer = customer;
         _discountSetting = discountSetting;
     }
-    public decimal CalcualteDiscount()
+    public decimal CalcualteDiscount(Room room)
     {
         if (_discountSetting.VIPCustomersDiscount.ContainsKey(_customer))
         {
@@ -18,3 +18,14 @@ public class VIPCustomerDiscount : IDiscount
             reservation.CalculatePrice
         }
     }
+
+    public decimal CalcualteDiscount(Reservation reservation)
+    {
+        throw new NotImplementedException();
+    }
+
+    public decimal CalcualteDiscount(Reservation reservation)
+    {
+        throw new NotImplementedException();
+    }
+}

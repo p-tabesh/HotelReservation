@@ -15,12 +15,12 @@ public class VIPCustomerDiscount : IDiscount
         _customer = customer;
         _discountSetting = discountSetting;
     }
-    public decimal CalcualteDiscount(Reservation reservation)
+    public decimal CalcualteDiscount()
     {
         if (_discountSetting.VIPCustomersDiscount.ContainsKey(_customer))
         {
             var discount = _discountSetting.VIPCustomersDiscount[_customer];
-
+            reservation.CalculatePrice
         }
     }
 }
