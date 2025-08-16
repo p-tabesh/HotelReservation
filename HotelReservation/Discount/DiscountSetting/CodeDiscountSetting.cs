@@ -1,5 +1,4 @@
-﻿
-namespace HotelReservation.Entity.Discount;
+﻿namespace HotelReservation.Discount.DiscountSetting;
 
 public class CodeDiscountSetting : IDiscountSetting
 {

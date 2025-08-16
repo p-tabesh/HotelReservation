@@ -1,4 +1,4 @@
-﻿namespace HotelReservation.Entity.Discount;
+﻿namespace HotelReservation.Discount.Discount;
 
 public interface IDiscount
 {
