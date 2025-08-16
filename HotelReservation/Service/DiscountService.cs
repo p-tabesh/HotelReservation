@@ -1,5 +1,5 @@
-﻿using HotelReservation.Entity;
-using HotelReservation.Entity.Discount;
+﻿using HotelReservation.Discount.Discount;
+using HotelReservation.Entity;
 
 namespace HotelReservation.Service;
 
@@ -7,6 +7,7 @@ public class DiscountService
 {
     IDiscount _discount;
     Reservation _reservation;
+
     public DiscountService(Reservation reservation, IDiscount discount)
     {
         _reservation = reservation;
@@ -15,7 +16,7 @@ public class DiscountService
 
     public void ApplyDiscount()
     {
-        var discount = _discount.CalcualteDiscount(_reservation);
+        var discount = _discount.CalcualteDiscount(_reservation.FinalPrice);
         _reservation.ApplyDiscount(discount);
     }
 }

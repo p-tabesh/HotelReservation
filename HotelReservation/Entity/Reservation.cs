@@ -1,5 +1,5 @@
 ﻿using HotelReservation.Entity.Pricing;
-using HotelReservation.Entity.Discount;
+using HotelReservation.Discount;
 
 namespace HotelReservation.Entity;
 

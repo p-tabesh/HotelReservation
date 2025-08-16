@@ -1,17 +1,19 @@
-﻿namespace HotelReservation.Entity.Discount;
+﻿using HotelReservation.Discount.DiscountSetting;
+
+namespace HotelReservation.Discount.Discount;
 
 public class CodeDiscount : IDiscount
 {
-    string _code;
     CodeDiscountSetting _discountSetting;
-    public CodeDiscount(CodeDiscountSetting discountSetting, string Code)
+
+    public CodeDiscount(CodeDiscountSetting discountSetting)
     {
         _discountSetting = discountSetting;
-        _code = Code;
     }
 
     public decimal CalcualteDiscount(decimal price)
     {
+        string _code = "";
         if (_discountSetting.CodeDiscounts.ContainsKey(_code))
         {
             var discount = _discountSetting.CodeDiscounts[_code];

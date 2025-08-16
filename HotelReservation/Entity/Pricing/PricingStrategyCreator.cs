@@ -6,4 +6,6 @@ public class PricingStrategyCreator
     {
 
     }
+
+    public IPricingStrategy Create() => new HighSeasoningPricing(new PricingStrategySetting());
 }
