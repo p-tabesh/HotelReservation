@@ -1,4 +1,4 @@
-﻿namespace HotelReservation.Entity;
+﻿namespace HotelReservation.Entity.Payment;
 
 public interface IPaymentMethod
 {

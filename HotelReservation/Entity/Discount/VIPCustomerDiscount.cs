@@ -1,31 +1,26 @@
-﻿using HotelReservation.Entity;
+﻿namespace HotelReservation.Entity.Discount;
 
-namespace HotelReservation.Discount;
 public class VIPCustomerDiscount : IDiscount
 {
     Customer _customer;
     DiscountSetting _discountSetting;
+
     public VIPCustomerDiscount(Customer customer, DiscountSetting discountSetting)
     {
         _customer = customer;
         _discountSetting = discountSetting;
     }
-    public decimal CalcualteDiscount(Room room)
+
+    public decimal CalcualteDiscount(decimal price)
     {
         if (_discountSetting.VIPCustomersDiscount.ContainsKey(_customer))
         {
             var discount = _discountSetting.VIPCustomersDiscount[_customer];
-            reservation.CalculatePrice
+            return price * discount / 100m;
         }
-    }
-
-    public decimal CalcualteDiscount(Reservation reservation)
-    {
-        throw new NotImplementedException();
-    }
-
-    public decimal CalcualteDiscount(Reservation reservation)
-    {
-        throw new NotImplementedException();
+        return 0;
     }
 }
+
+
+
